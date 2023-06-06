@@ -10,4 +10,4 @@ elif compare == 0 :
 elif compare < 6 and compare != 0:
     str = "and is less than 6 and not 0"
 
-print(f"Last digit of {number} is {compare} {str}")
+print(f"Last digit of {number:d} is {compare:d} {str:s}")
