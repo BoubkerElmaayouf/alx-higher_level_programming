@@ -8,4 +8,7 @@ def safe_print_list(my_list=[], x=0):
         pass
     finally:
         print("")
-        return (i + 1) if i < x - 1 else x
+        if i < x - 1:
+            return (i + 1)
+        else:
+            return (x)
