@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" The Rectangle class """
+""" The Retangle Class """
 
 
 class Rectangle:
-    """ Defining Rectangle class """
+    """Defining:  Retangle"""
 
     def __init__(self, width=0, height=0):
-        """ Start a new Retangle
+        """ Start A New Retangle
         args:
         width: intiger
         height: intiger
@@ -16,7 +16,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """ Get The width Value """
+        """get the width value """
         return self.__width
 
     @width.setter
@@ -25,17 +25,17 @@ class Rectangle:
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise TypeError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
-        """ Get height Value """
+        """Get the height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ Set The Value """
+        """Set the value"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -43,10 +43,10 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Return the are of the retangle"""
+        """Return the area of the retangle"""
         return (self.__width * self.__height)
 
-    def perimetTher(self):
+    def perimeter(self):
         """Return the perimeter of the retangle"""
         if self.__width == 0 or self.__height == 0:
             return (0)
@@ -54,7 +54,7 @@ class Rectangle:
 
     def __str__(self):
         """Return the printable representation of the retangle
-        Represent the retangle with #
+        Represent the retangle with '#'
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
@@ -71,3 +71,7 @@ class Rectangle:
         r = "Rectangle(" + str(self.__width)
         r += ", " + str(self.__height) + ")"
         return (r)
+
+    def __del__(self):
+        """Print a message when the retangle is deleted"""
+        print("Bye rectangle...")
