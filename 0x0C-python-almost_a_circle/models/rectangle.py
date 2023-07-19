@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" DEFINE A NEW CLASS"""
+""" DEFINING A NEW CLASS"""
 from models.base import Base
 
 
@@ -9,9 +9,9 @@ class Rectangle(Base):
         """INIT A NEW RECTANGLE
         ARGS
         ====
-        width (int)
-        height (int)
-        x, y (int)
+        width: intiger
+        height: intiger
+        x, y: int
         """
         self.width = width
         self.height = height
