@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  function magic_string() that returns a string “BestSchool”
+"""  function magic_string()  returns a string “BestSchool”
 n times the number of the iteration """
 
 
