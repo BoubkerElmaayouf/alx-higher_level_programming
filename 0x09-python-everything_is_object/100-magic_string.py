@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-"""  function magic_string()  returns a string “BestSchool”
-n times the number of the iteration """
-
-
 def magic_string():
-    magic_string.count = getattr(magic_string, 'count', 0) + 1
-    return ", ".join(["BestSchool"] * magic_string.count)
+    magic_string.counter = getattr(magic_string, "counter", 0) + 1
+    return ', '.join('BestSchool' for _ in range(magic_string.counter))
