@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """ Define print_square function"""
 
+
 def print_square(size):
     """
     print a square by # sign and the size is the len of the square
 
-    Args: 
+    Args
         size: the len of the square
-    
+
     Raises:
         TypeError: if size is not an integer
     """
