@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-""" DECLARING A CLASS """
+"""Definding a class"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """ INITIALIZING CLASS Rectange """
+    """init class retangle"""
 
     def __init__(self, width, height):
-        """ init new rectangle,
-        ARGS:
-        width and hieght
+        """init new retngle
+        Args:
+        width and height
         """
-
         self.integer_validator("width", width)
         self.__width = width
         self.integer_validator("height", height)
