@@ -1,5 +1,5 @@
 # ALX SE PROGRAM || COHORT 18 2023/12/05
-# Project: 0x0B. Python - Input/Output
+## Project: 0x0B. Python - Input/Output
 
 ## Resources
 
