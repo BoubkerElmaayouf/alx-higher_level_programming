@@ -1,8 +1,4 @@
 #!/usr/bin/node
-const arglen = process.argv.length;
+const [arg1, arg2] = process.argv.slice(2);
 
-if (arglen >= 4) {
-  console.log(process.argv[2] + ' is ' + process.argv[3]);
-} else {
-  console.log(process.argv[2] || 'undefined' + ' is ' + process.argv[3] || 'undefined');
-}
+console.log((arg1 || 'undefined') + ' is ' + (arg2 || 'undefined'));
