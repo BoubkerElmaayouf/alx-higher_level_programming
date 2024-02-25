@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-states models
+"""states models
 """
 if __name__ == "__main__":
     import MySQLdb
@@ -8,7 +7,7 @@ if __name__ == "__main__":
 
     db_host = "localhost"
     db_user = sys.argv[1]
-    db_password = sys.arv[2]
+    db_password = sys.argv[2]
     db_name = sys.argv[3]
     port = 3306
 
@@ -20,7 +19,8 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cursor.fetchall()
 
-    for rows in row:
-        print(rows)
+    for row in rows:
+        print(row)
+
     cursor.close()
     db.close()
