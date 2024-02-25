@@ -11,3 +11,7 @@ if __name__ == "__main__":
 
     r2 = Rectangle(3, 2, 1, 0)
     r2.display()
+
+
+    for i in range(10): 
+        print("this is the end!!")
