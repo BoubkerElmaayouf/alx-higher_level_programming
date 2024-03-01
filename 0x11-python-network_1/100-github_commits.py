@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
-""" module doc """
+""" module document """
 import sys
 import requests
 
