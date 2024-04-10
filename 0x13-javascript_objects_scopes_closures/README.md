@@ -1,4 +1,4 @@
-# ALX SE PROGRAM 2024/02/14 || COHORT 18
+# ALX SE PROGRAM 2024/04/09 || COHORT 20
 ## Project: 0x13. JavaScript - Objects, Scopes and Closures
 
 ## Resources
@@ -45,3 +45,4 @@
 | 11. Factor index | [100-map.js](./100-map.js) |
 | 12. Sorted occurences | [101-sorted.js](./101-sorted.js) |
 | 13. Concat files | [102-concat.js](./102-concat.js) |
+
