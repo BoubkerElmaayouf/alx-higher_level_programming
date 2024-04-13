@@ -18,8 +18,8 @@ if __name__ == "__main__":
         passwd=sys.argv[2], name=sys.argv[3], port=3306)
 
     cursor = conx.cursr()
-    cursor.execute(f"SELECT * FROM states WHERE name = '{input}'\
-                   ORDER BY id ASC")
+    cursor.execute("SELECT * FROM states WHERE name = '{}'\
+                   ORDER BY id ASC".format(input))
     rows = cursor.fetchall()
 
     for row in rows:
