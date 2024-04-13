@@ -13,7 +13,7 @@ if __name__ == '__main__':
     safe_inj = (state_searched,)
 
     conx = MySQLdb.connect(host="localhost", port=3306, user=db_user,
-                         passwd=db_pass, db=db_name)
+                           passwd=db_pass, db=db_name)
 
     cursor = conx.cursor()
     cursor.execute("SELECT name FROM cities WHERE state_id = \
