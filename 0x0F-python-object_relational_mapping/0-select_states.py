@@ -6,6 +6,11 @@ states script
 if __name__ == "__main__":
     import MySQLdb
     import sys
+
+    if len(sys.argv) != 4:
+        print("Usage: {} username password database".format(sys.argv[0]))
+        sys.exit(1)
+
     username_db = sys.argv[1]
     passwrd_db = sys.argv[2]
     name_db = sys.argv[3]
