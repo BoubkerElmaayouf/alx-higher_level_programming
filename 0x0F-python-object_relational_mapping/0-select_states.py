@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""
-states script
-"""
+'''states selection'''
+
+
 
 if __name__ == "__main__":
     import MySQLdb
