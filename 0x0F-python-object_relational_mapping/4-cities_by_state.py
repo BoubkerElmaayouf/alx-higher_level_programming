@@ -10,7 +10,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("Usage: {} username password database".format(sys.argv[0]))
         sys.exit(1)
-    
+
     db_user = sys.argv[1]
     db_passwd = sys.argv[2]
     db_name = sys.argv[3]
@@ -19,9 +19,9 @@ if __name__ == "__main__":
                            name=db_name, port=3306)
 
     cursor = conx.cursor()
-    cursor.execute("SELECET cities.id, cities.name, state.name FROM cities \
-                   JOIN states ON states.id = cities.state_id \
-                   ORDER BY cities.id")
+    cursor.execute("SELECT cities.id, cities.name, states.name FROM cities \
+                    JOIN states ON states.id = cities.state_id \
+                    ORDER BY cities.id")
 
     rows = cursor.fetchall()
 
