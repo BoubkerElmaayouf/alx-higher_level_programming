@@ -1,29 +1,27 @@
 #!/usr/bin/python3
-"""
-Filter states by user input module
-"""
+'''Filter states by user input '''
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     import MySQLdb
     import sys
 
-    if (sys.argv) != 4:
-        print("Usage: {} username password database".format(sys.argv[0]))
-        sys.exit(1)
+    db_user = sys.argv[1]
+    db_pass = sys.argv[2]
+    db_name = sys.argv[3]
+    state_searched = sys.argv[4]
 
-    input = sys.argv[4]
+    db = MySQLdb.connect(host="localhost", port=3306, user=db_user,
+                         passwd=db_pass, db=db_name)
 
-    conx = MySQLdb.connect(
-        host="localhost", user=sys.argv[1],
-        passwd=sys.argv[2], name=sys.argv[3], port=3306)
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
+             ORDER BY id ASC".format(state_searched))
 
-    cursor = conx.cursr()
-    cursor.execute("SELECT * FROM states WHERE name = '{}'\
-                   ORDER BY id ASC".format(input))
-    rows = cursor.fetchall()
+    rows = cur.fetchall()
 
     for row in rows:
         print(row)
 
-    cursor.close()
-    conx.close()
+    cur.close()
+    db.close()
