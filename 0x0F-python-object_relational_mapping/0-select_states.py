@@ -18,7 +18,7 @@ if __name__ == "__main__":
     port = 3306
 
     conx = MySQLdb.connect(
-        host=host_db, user=username_db, passwrd=passwrd_db,
+        host=host_db, user=username_db, passwd=passwrd_db,
         name=name_db, port=port
     )
 
